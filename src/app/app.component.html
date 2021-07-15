@@ -1,0 +1,27 @@
+<div class="container">
+  <form>
+    <div class="input-group">
+      <input
+        type="search"
+        class="form-control rounded"
+        placeholder="Search"
+        aria-label="Search"
+        aria-describedby="search-addon"
+        (input)="handleInput($event)"
+      />
+      <button
+        (click)="handleSubmit($event)"
+        type="submit"
+        class="btn btn-outline-primary"
+      >
+        search
+      </button>
+    </div>
+  </form>
+  <br />
+  <div class="row">
+    <div class="col" *ngFor="let url of urls">
+      <img [src]="url" width="250" />
+    </div>
+  </div>
+</div>
